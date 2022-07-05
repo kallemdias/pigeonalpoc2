@@ -1,0 +1,313 @@
+enum LogType {
+	INFO, 
+    WARNING, 
+    ERROR
+}
+
+enum TimeWindow {
+	THREEH, 
+    FOURH, 
+    FIVEH, 
+    SIXH, 
+    SEVENH, 
+    EIGHTH
+}
+
+enum CheckPointDistance {
+	ONEKM, TWOKM, FIVEKM,
+    TENKM, FIFTEENKM, TWENTYKM, 
+    TWENTYFIVEKM, THIRTYKM, FIFTYKM, 
+    HUNDREDKM
+}
+
+enum CheckLinePointDistance {
+	FIVEKM, TENKM, 
+    FIFTEENKM, TWENTYKM, 
+    TWENTYFIVEKM, THIRTYKM, 
+    FIFTYKM
+}
+
+
+enum LatDirection {
+    NORTH, SOUTH
+}
+
+enum LngDirection {
+    EAST, WEST
+}
+
+entity Association {
+	name String required 
+    shortName String required
+    email String pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)    
+    phone String     
+    addressLine1 String     
+    addressLine2 String    
+    city String     
+    country String
+    fbLink String
+}
+
+entity RacingPlan {
+	name String required
+    assocation String required
+    releaseDate Instant
+    releasePoint String // ReadOnly, Locationname / - address of Release Location
+    arrivalPoint String // ReadOnly, Locationname / - address of arrival Location
+    releasePointDMS String // ReadOnly, ReleasePoint Gps Coordinates 
+    arrivalPointDMS String // ReadOnly, ArrivalPoint Gps Coordinates 
+    releaseMapLink String // Map Link for ReleasePoint 
+    arrivalMapLink String // Map Link for arrivalPoint 
+    distance Double min(0)
+    distanceDisplayedValue String
+    checkPointDistance CheckPointDistance
+    checkLinedReporting Boolean
+    checkLinePointDistance CheckLinePointDistance
+    timeWindow TimeWindow
+    // Controll Properties 
+    generationInProgress Boolean // once this property is Set, Button for Generation gets inactivated 
+    generated Boolean 
+    reset Boolean // 
+    progress Integer // 9% 15% ...100%     
+}
+
+entity Leg {
+	order Integer
+	depLatDeg Integer min(0) max(90)
+    depLatMin Integer min(0) max(59)
+    depLatSec Float 
+    depLatDirection LatDirection
+    depLngDeg Integer min(0) max(180)
+    depLngMin Integer min(0) max(59)
+    depLngSec Float 
+    depLngDirection LngDirection
+    depLatDisplayedValue String
+    depLngDisplayedValue String
+    depLatDecimal Double
+    depLngDecimal Double
+ 	arrLatDeg Integer min(0) max(90)
+    arrLatMin Integer min(0) max(59)
+    arrLatSec Float 
+    arrLatDirection LatDirection
+    arrLngDeg Integer min(0) max(180)
+    arrLngMin Integer min(0) max(59)
+    arrLngSec Float 
+    arrLngDirection LngDirection
+    arrLatDisplayedValue String
+    arrLngDisplayedValue String
+    arrLatDecimal Double
+    arrLngDecimal Double
+    checkPointDistance CheckPointDistance
+    checkLinePointDistance CheckLinePointDistance
+    timeWindow TimeWindow
+}
+
+
+entity WeatherReport {
+	initiated Instant
+    releaseDateTime Instant
+    checkpointsDistance Integer min(5)
+    alerts String 
+}
+
+
+entity CheckLine {
+	order Integer min(0)
+    dateTime Instant
+    locationName String
+    latDecimal Double
+    lngDecimal Double
+    distance Double min(0) 
+    distanceDisplayedValue String
+    link String
+}
+
+entity CheckPoint {
+    order Integer min(0)
+    dateTime Instant
+    locationName String
+    latDecimal Double
+    lngDecimal Double
+    distance Double min(0) 
+    distanceDisplayedValue String
+    link String
+    alerts String  
+}
+
+enum WeatherProperty {
+	TIME, SUMMARY, ICON, CLOUDCOVER, VISIBILITY, 
+    WINDSPEED, WINDBEARING, GUST, 
+    TEMPERATURE, FEELSLIKE, HUMIDITY, 
+    PERCIP, PERCIPPROBABILTY, PERCIPTYPE,
+    PRESSURE, OZONE, UVINDEX
+}
+
+entity WeatherDataPoint{
+	property WeatherProperty 
+	midNight String
+    migNightRelevance Boolean
+    one String
+    oneRelevance Boolean
+    two String 
+    twoRelevance Boolean
+    three String 
+    threeRelevance Boolean
+    four String
+    fourRelevance Boolean
+    five String
+	fiveRelevance Boolean
+	six String
+    sixRelevance Boolean
+    seven String
+    sevenRelevance Boolean
+    eight String
+    eightRelevance Boolean
+    nine String
+    nineRelevance Boolean
+    ten String
+    tenRelevance Boolean
+    eleven String
+    elevenRelevance Boolean
+    twelve String
+    twelveRelevance Boolean
+    thirteen String
+    thirteenRelevance Boolean
+    fourteen String
+    fourteenRelevance Boolean
+    fifteen String
+    fifteenRelevance Boolean
+    sixteen String
+    sixteenRelevance Boolean
+    seventeen String
+    seventeenRelevance Boolean
+    eighteen String
+    eighteenRelevance Boolean
+    nineteen String
+    nineteenRelevance Boolean
+    twenty String
+    twentyRelevance Boolean
+    twentyOne String
+    twentyOneRelevance Boolean
+    twentyTwo String
+    twentyTwoRelevance Boolean
+    twentyThree String
+}
+
+entity RelevanceHeader {
+	midnight Boolean
+    one Boolean
+    two Boolean
+    three Boolean
+    four Boolean
+    five Boolean
+    six Boolean
+    seven Boolean 
+    eight Boolean
+    nine Boolean
+    ten Boolean
+    eleven Boolean
+    twelve Boolean
+    thirteen Boolean
+    fourteen Boolean
+    fifteen Boolean
+    sixteen Boolean
+    seventeen Boolean
+    eighteen Boolean
+    nineteen Boolean
+    twenty Boolean
+    twentyOne Boolean
+    twentyTwo Boolean
+    twentyThree Boolean
+}
+
+entity GpsCoordinateCheck {
+	latDeg Integer min(0) max(90)
+    latMin Integer min(0) max(59)
+    latSec Float 
+    latDirection LatDirection
+    lngDeg Integer min(0) max(180)
+    lngMin Integer min(0) max(59)
+    lngSec Float 
+    lngDirection LngDirection
+    latDisplayedValue String
+    lngDisplayedValue String
+    latDecimal Double
+    lngDecimal Double
+    link String
+}
+
+entity DistanceCalculator {
+	depLatDeg Integer min(0) max(90)
+    depLatMin Integer min(0) max(59)
+    depLatSec Float 
+    depLatDirection LatDirection
+    depLngDeg Integer min(0) max(180)
+    depLngMin Integer min(0) max(59)
+    depLngSec Float 
+    depLngDirection LngDirection
+    depLatDisplayedValue String
+    depLngDisplayedValue String
+    depLatDecimal Double
+    depLngDecimal Double
+	arrLatDeg Integer min(0) max(90)
+    arrLatMin Integer min(0) max(59)
+    arrLatSec Float 
+    arrLatDirection LatDirection
+    arrLngDeg Integer min(0) max(180)
+    arrLngMin Integer min(0) max(59)
+    arrLngSec Float 
+    arrLngDirection LngDirection
+    arrLatDisplayedValue String
+    arrLngDisplayedValue String
+    arrLatDecimal Double
+    arrLngDecimal Double
+    distanceInMeters Double min(0)
+    distanceInMetersDispVal String
+    depLink String
+    arrLink String    
+}
+
+entity VelocityCalculator {
+	releaseDateTime Instant
+    arrivalDateTime Instant    
+    distanceKM Integer 
+    distanceM Integer 
+    velocity Double 
+    velocityDispVal String 
+}
+
+entity YcLogEntry {
+	created Instant 
+    serviceName String
+    method String 
+    step String
+    discription String 
+    logType LogType
+}
+
+
+
+relationship OneToMany {
+	Association{racingPlan} to RacingPlan
+    RacingPlan{weatherReport} to WeatherReport
+    RacingPlan{leg} to Leg
+    RacingPlan{log} to YcLogEntry
+    WeatherReport{checkLine} to CheckLine
+    CheckLine{checkPoint} to CheckPoint
+    CheckPoint{dataPoint} to WeatherDataPoint 
+}
+
+relationship ManyToOne {
+	RacingPlan{user(login)} to User
+}
+
+relationship OneToOne {
+	RelevanceHeader{weatherDataPoint} to WeatherDataPoint{releavanceHeader}
+}
+
+
+// Set pagination options
+paginate * with infinite-scroll
+
+// Set service options to all except few
+service all with serviceImpl
