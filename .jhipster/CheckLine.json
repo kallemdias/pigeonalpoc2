@@ -1,0 +1,65 @@
+{
+  "applications": "*",
+  "changelogDate": "20220705170818",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "check_line",
+  "fields": [
+    {
+      "fieldName": "order",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "dateTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "locationName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "latDecimal",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "lngDecimal",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "distance",
+      "fieldType": "Double",
+      "fieldValidateRules": ["min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "distanceDisplayedValue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "link",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "CheckLine",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "checkPoint",
+      "otherEntityRelationshipName": "checkLine",
+      "relationshipName": "checkPoint",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "weatherReport",
+      "otherEntityRelationshipName": "checkLine",
+      "relationshipName": "weatherReport",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

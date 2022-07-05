@@ -1,0 +1,21 @@
+export enum CheckPointDistance {
+  ONEKM = 'ONEKM',
+
+  TWOKM = 'TWOKM',
+
+  FIVEKM = 'FIVEKM',
+
+  TENKM = 'TENKM',
+
+  FIFTEENKM = 'FIFTEENKM',
+
+  TWENTYKM = 'TWENTYKM',
+
+  TWENTYFIVEKM = 'TWENTYFIVEKM',
+
+  THIRTYKM = 'THIRTYKM',
+
+  FIFTYKM = 'FIFTYKM',
+
+  HUNDREDKM = 'HUNDREDKM',
+}

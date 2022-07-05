@@ -1,0 +1,48 @@
+{
+  "applications": "*",
+  "changelogDate": "20220705170825",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "yc_log_entry",
+  "fields": [
+    {
+      "fieldName": "created",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "serviceName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "method",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "step",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "discription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "logType",
+      "fieldType": "LogType",
+      "fieldValues": "INFO,WARNING,ERROR"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "YcLogEntry",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "racingPlan",
+      "otherEntityRelationshipName": "log",
+      "relationshipName": "racingPlan",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,69 @@
+{
+  "applications": "*",
+  "changelogDate": "20220705170819",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "check_point",
+  "fields": [
+    {
+      "fieldName": "order",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "dateTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "locationName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "latDecimal",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "lngDecimal",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "distance",
+      "fieldType": "Double",
+      "fieldValidateRules": ["min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "distanceDisplayedValue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "link",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "alerts",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "CheckPoint",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "weatherDataPoint",
+      "otherEntityRelationshipName": "checkPoint",
+      "relationshipName": "dataPoint",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "checkLine",
+      "otherEntityRelationshipName": "checkPoint",
+      "relationshipName": "checkLine",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

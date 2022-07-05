@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity WeatherDataPoint.
+    -->
+    <changeSet id="20220705170820-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="check_point_id"
+                                 baseTableName="weather_data_point"
+                                 constraintName="fk_weather_data_point__check_point_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="check_point"/>
+    </changeSet>
+</databaseChangeLog>

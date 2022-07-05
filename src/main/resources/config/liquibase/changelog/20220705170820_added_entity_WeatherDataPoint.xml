@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity WeatherDataPoint.
+    -->
+    <changeSet id="20220705170820-1" author="jhipster">
+        <createTable tableName="weather_data_point">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="property" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="mid_night" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="mig_night_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="one" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="one_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="two" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="two_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="three" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="three_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="four" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="four_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="five" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="five_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="six" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="six_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="seven" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="seven_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="eight" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="eight_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="nine" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nine_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="ten" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ten_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="eleven" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="eleven_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="twelve" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="twelve_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="thirteen" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="thirteen_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="fourteen" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="fourteen_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="fifteen" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="fifteen_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="sixteen" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sixteen_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="seventeen" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="seventeen_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="eighteen" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="eighteen_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="nineteen" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nineteen_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="twenty" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="twenty_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="twenty_one" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="twenty_one_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="twenty_two" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="twenty_two_relevance" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="twenty_three" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="check_point_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20220705170820-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/weather_data_point.csv"
+                  separator=";"
+                  tableName="weather_data_point"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="property" type="string"/>
+            <column name="mid_night" type="string"/>
+            <column name="mig_night_relevance" type="boolean"/>
+            <column name="one" type="string"/>
+            <column name="one_relevance" type="boolean"/>
+            <column name="two" type="string"/>
+            <column name="two_relevance" type="boolean"/>
+            <column name="three" type="string"/>
+            <column name="three_relevance" type="boolean"/>
+            <column name="four" type="string"/>
+            <column name="four_relevance" type="boolean"/>
+            <column name="five" type="string"/>
+            <column name="five_relevance" type="boolean"/>
+            <column name="six" type="string"/>
+            <column name="six_relevance" type="boolean"/>
+            <column name="seven" type="string"/>
+            <column name="seven_relevance" type="boolean"/>
+            <column name="eight" type="string"/>
+            <column name="eight_relevance" type="boolean"/>
+            <column name="nine" type="string"/>
+            <column name="nine_relevance" type="boolean"/>
+            <column name="ten" type="string"/>
+            <column name="ten_relevance" type="boolean"/>
+            <column name="eleven" type="string"/>
+            <column name="eleven_relevance" type="boolean"/>
+            <column name="twelve" type="string"/>
+            <column name="twelve_relevance" type="boolean"/>
+            <column name="thirteen" type="string"/>
+            <column name="thirteen_relevance" type="boolean"/>
+            <column name="fourteen" type="string"/>
+            <column name="fourteen_relevance" type="boolean"/>
+            <column name="fifteen" type="string"/>
+            <column name="fifteen_relevance" type="boolean"/>
+            <column name="sixteen" type="string"/>
+            <column name="sixteen_relevance" type="boolean"/>
+            <column name="seventeen" type="string"/>
+            <column name="seventeen_relevance" type="boolean"/>
+            <column name="eighteen" type="string"/>
+            <column name="eighteen_relevance" type="boolean"/>
+            <column name="nineteen" type="string"/>
+            <column name="nineteen_relevance" type="boolean"/>
+            <column name="twenty" type="string"/>
+            <column name="twenty_relevance" type="boolean"/>
+            <column name="twenty_one" type="string"/>
+            <column name="twenty_one_relevance" type="boolean"/>
+            <column name="twenty_two" type="string"/>
+            <column name="twenty_two_relevance" type="boolean"/>
+            <column name="twenty_three" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

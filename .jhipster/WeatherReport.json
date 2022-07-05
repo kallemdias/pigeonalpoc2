@@ -1,0 +1,47 @@
+{
+  "applications": "*",
+  "changelogDate": "20220705170817",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "weather_report",
+  "fields": [
+    {
+      "fieldName": "initiated",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "releaseDateTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "checkpointsDistance",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min"],
+      "fieldValidateRulesMin": "5"
+    },
+    {
+      "fieldName": "alerts",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "WeatherReport",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "checkLine",
+      "otherEntityRelationshipName": "weatherReport",
+      "relationshipName": "checkLine",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "racingPlan",
+      "otherEntityRelationshipName": "weatherReport",
+      "relationshipName": "racingPlan",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

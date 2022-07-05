@@ -1,0 +1,223 @@
+{
+  "applications": "*",
+  "changelogDate": "20220705170820",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "weather_data_point",
+  "fields": [
+    {
+      "fieldName": "property",
+      "fieldType": "WeatherProperty",
+      "fieldValues": "TIME,SUMMARY,ICON,CLOUDCOVER,VISIBILITY,WINDSPEED,WINDBEARING,GUST,TEMPERATURE,FEELSLIKE,HUMIDITY,PERCIP,PERCIPPROBABILTY,PERCIPTYPE,PRESSURE,OZONE,UVINDEX"
+    },
+    {
+      "fieldName": "midNight",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "migNightRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "one",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "oneRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "two",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "twoRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "three",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "threeRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "four",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fourRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "five",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fiveRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "six",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sixRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "seven",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sevenRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "eight",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "eightRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "nine",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nineRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "ten",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tenRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "eleven",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "elevenRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "twelve",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "twelveRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "thirteen",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "thirteenRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "fourteen",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fourteenRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "fifteen",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fifteenRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "sixteen",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sixteenRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "seventeen",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "seventeenRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "eighteen",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "eighteenRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "nineteen",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nineteenRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "twenty",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "twentyRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "twentyOne",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "twentyOneRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "twentyTwo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "twentyTwoRelevance",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "twentyThree",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "WeatherDataPoint",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "relevanceHeader",
+      "otherEntityRelationshipName": "weatherDataPoint",
+      "ownerSide": false,
+      "relationshipName": "releavanceHeader",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "checkPoint",
+      "otherEntityRelationshipName": "dataPoint",
+      "relationshipName": "checkPoint",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

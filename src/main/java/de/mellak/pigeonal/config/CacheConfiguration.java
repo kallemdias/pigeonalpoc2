@@ -48,6 +48,25 @@ public class CacheConfiguration {
             createCache(cm, de.mellak.pigeonal.domain.User.class.getName());
             createCache(cm, de.mellak.pigeonal.domain.Authority.class.getName());
             createCache(cm, de.mellak.pigeonal.domain.User.class.getName() + ".authorities");
+            createCache(cm, de.mellak.pigeonal.domain.Association.class.getName());
+            createCache(cm, de.mellak.pigeonal.domain.Association.class.getName() + ".racingPlans");
+            createCache(cm, de.mellak.pigeonal.domain.RacingPlan.class.getName());
+            createCache(cm, de.mellak.pigeonal.domain.RacingPlan.class.getName() + ".weatherReports");
+            createCache(cm, de.mellak.pigeonal.domain.RacingPlan.class.getName() + ".legs");
+            createCache(cm, de.mellak.pigeonal.domain.RacingPlan.class.getName() + ".logs");
+            createCache(cm, de.mellak.pigeonal.domain.Leg.class.getName());
+            createCache(cm, de.mellak.pigeonal.domain.WeatherReport.class.getName());
+            createCache(cm, de.mellak.pigeonal.domain.WeatherReport.class.getName() + ".checkLines");
+            createCache(cm, de.mellak.pigeonal.domain.CheckLine.class.getName());
+            createCache(cm, de.mellak.pigeonal.domain.CheckLine.class.getName() + ".checkPoints");
+            createCache(cm, de.mellak.pigeonal.domain.CheckPoint.class.getName());
+            createCache(cm, de.mellak.pigeonal.domain.CheckPoint.class.getName() + ".dataPoints");
+            createCache(cm, de.mellak.pigeonal.domain.WeatherDataPoint.class.getName());
+            createCache(cm, de.mellak.pigeonal.domain.RelevanceHeader.class.getName());
+            createCache(cm, de.mellak.pigeonal.domain.GpsCoordinateCheck.class.getName());
+            createCache(cm, de.mellak.pigeonal.domain.DistanceCalculator.class.getName());
+            createCache(cm, de.mellak.pigeonal.domain.VelocityCalculator.class.getName());
+            createCache(cm, de.mellak.pigeonal.domain.YcLogEntry.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

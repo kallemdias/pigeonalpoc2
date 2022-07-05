@@ -1,0 +1,82 @@
+{
+  "applications": "*",
+  "changelogDate": "20220705170822",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "gps_coordinate_check",
+  "fields": [
+    {
+      "fieldName": "latDeg",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "90",
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "latMin",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "59",
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "latSec",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "latDirection",
+      "fieldType": "LatDirection",
+      "fieldValues": "NORTH,SOUTH"
+    },
+    {
+      "fieldName": "lngDeg",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "180",
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "lngMin",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "59",
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "lngSec",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "lngDirection",
+      "fieldType": "LngDirection",
+      "fieldValues": "EAST,WEST"
+    },
+    {
+      "fieldName": "latDisplayedValue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lngDisplayedValue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "latDecimal",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "lngDecimal",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "link",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "GpsCoordinateCheck",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}
