@@ -1,0 +1,40 @@
+{
+  "applications": "*",
+  "changelogDate": "20220705170824",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "velocity_calculator",
+  "fields": [
+    {
+      "fieldName": "releaseDateTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "arrivalDateTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "distanceKM",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "distanceM",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "velocity",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "velocityDispVal",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "VelocityCalculator",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

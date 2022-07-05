@@ -1,0 +1,120 @@
+{
+  "applications": "*",
+  "changelogDate": "20220705170821",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "relevance_header",
+  "fields": [
+    {
+      "fieldName": "midnight",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "one",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "two",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "three",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "four",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "five",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "six",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "seven",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "eight",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "nine",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "ten",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "eleven",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "twelve",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "thirteen",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "fourteen",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "fifteen",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "sixteen",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "seventeen",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "eighteen",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "nineteen",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "twenty",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "twentyOne",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "twentyTwo",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "twentyThree",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "RelevanceHeader",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "weatherDataPoint",
+      "otherEntityRelationshipName": "releavanceHeader",
+      "ownerSide": true,
+      "relationshipName": "weatherDataPoint",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

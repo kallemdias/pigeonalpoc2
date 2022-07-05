@@ -1,0 +1,158 @@
+{
+  "applications": "*",
+  "changelogDate": "20220705170823",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "distance_calculator",
+  "fields": [
+    {
+      "fieldName": "depLatDeg",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "90",
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "depLatMin",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "59",
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "depLatSec",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "depLatDirection",
+      "fieldType": "LatDirection",
+      "fieldValues": "NORTH,SOUTH"
+    },
+    {
+      "fieldName": "depLngDeg",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "180",
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "depLngMin",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "59",
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "depLngSec",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "depLngDirection",
+      "fieldType": "LngDirection",
+      "fieldValues": "EAST,WEST"
+    },
+    {
+      "fieldName": "depLatDisplayedValue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "depLngDisplayedValue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "depLatDecimal",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "depLngDecimal",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "arrLatDeg",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "90",
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "arrLatMin",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "59",
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "arrLatSec",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "arrLatDirection",
+      "fieldType": "LatDirection",
+      "fieldValues": "NORTH,SOUTH"
+    },
+    {
+      "fieldName": "arrLngDeg",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "180",
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "arrLngMin",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "59",
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "arrLngSec",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "arrLngDirection",
+      "fieldType": "LngDirection",
+      "fieldValues": "EAST,WEST"
+    },
+    {
+      "fieldName": "arrLatDisplayedValue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "arrLngDisplayedValue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "arrLatDecimal",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "arrLngDecimal",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "distanceInMeters",
+      "fieldType": "Double",
+      "fieldValidateRules": ["min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "distanceInMetersDispVal",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "depLink",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "arrLink",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "DistanceCalculator",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

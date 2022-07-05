@@ -1,0 +1,131 @@
+{
+  "applications": "*",
+  "changelogDate": "20220705170815",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "racing_plan",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "assocation",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "releaseDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "releasePoint",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "arrivalPoint",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "releasePointDMS",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "arrivalPointDMS",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "releaseMapLink",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "arrivalMapLink",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "distance",
+      "fieldType": "Double",
+      "fieldValidateRules": ["min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "distanceDisplayedValue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "checkPointDistance",
+      "fieldType": "CheckPointDistance",
+      "fieldValues": "ONEKM,TWOKM,FIVEKM,TENKM,FIFTEENKM,TWENTYKM,TWENTYFIVEKM,THIRTYKM,FIFTYKM,HUNDREDKM"
+    },
+    {
+      "fieldName": "checkLinedReporting",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "checkLinePointDistance",
+      "fieldType": "CheckLinePointDistance",
+      "fieldValues": "FIVEKM,TENKM,FIFTEENKM,TWENTYKM,TWENTYFIVEKM,THIRTYKM,FIFTYKM"
+    },
+    {
+      "fieldName": "timeWindow",
+      "fieldType": "TimeWindow",
+      "fieldValues": "THREEH,FOURH,FIVEH,SIXH,SEVENH,EIGHTH"
+    },
+    {
+      "fieldName": "generationInProgress",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "generated",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "reset",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "progress",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "RacingPlan",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "weatherReport",
+      "otherEntityRelationshipName": "racingPlan",
+      "relationshipName": "weatherReport",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "leg",
+      "otherEntityRelationshipName": "racingPlan",
+      "relationshipName": "leg",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "ycLogEntry",
+      "otherEntityRelationshipName": "racingPlan",
+      "relationshipName": "log",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "racingPlan",
+      "relationshipName": "user",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "association",
+      "otherEntityRelationshipName": "racingPlan",
+      "relationshipName": "association",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}
